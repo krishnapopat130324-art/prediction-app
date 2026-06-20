@@ -1,90 +1,95 @@
-# 🧠 Fairness Forecaster
+# 🌍 Global Weather Prediction Dashboard
 
-### AI-Powered Income Prediction & Bias Detection
+### Real-Time Weather Intelligence with AI-Powered Risk Predictions
 
-An interactive machine learning platform that predicts income using the Adult Census dataset while identifying demographic bias and providing explainable AI insights.
+A full-stack weather intelligence platform that provides live weather conditions, machine learning-based risk predictions, interactive mapping, and real-time event monitoring for any city worldwide.
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue)
-![Streamlit](https://img.shields.io/badge/Streamlit-Latest-red)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
+![Next.js](https://img.shields.io/badge/Next.js-14-black)
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-orange)
-![License](https://img.shields.io/badge/License-MIT-green)
+![License](https://img.shields.io/badge/License-MIT-success)
 
 ---
 
 ## 📖 Overview
 
-Fairness Forecaster is an end-to-end machine learning application focused on both predictive performance and responsible AI.
+Global Weather Prediction Dashboard is a full-stack application that combines real-time weather intelligence with machine learning-powered disruption risk analysis.
 
-The platform predicts whether an individual's annual income exceeds $50,000 using the Adult Census Income Dataset while simultaneously evaluating model fairness across demographic groups.
+The platform allows users to search for any city in the world and instantly receive weather insights, risk assessments, location visualization, and recent event information through a modern interactive dashboard.
 
-Unlike traditional ML projects that focus solely on accuracy, Fairness Forecaster incorporates bias detection, explainability, and fairness auditing into the complete machine learning workflow.
+### Key Objectives
 
-### Core Objectives
-
-* Build an accurate classification model
-* Evaluate fairness across demographic groups
-* Improve model transparency
-* Demonstrate responsible AI practices
-* Provide interactive data exploration
+* Deliver real-time weather intelligence
+* Predict weather-related disruption risks
+* Visualize locations using interactive maps
+* Provide event monitoring capabilities
+* Create a fast and user-friendly experience
 
 ---
 
 ## ✨ Features
 
-### 📊 Interactive Data Exploration
+### 🌍 Global City Search
 
-Explore feature distributions, demographic trends, and income patterns through interactive visualizations.
+Search any city worldwide and retrieve location-specific weather intelligence within seconds.
 
-### 🤖 Machine Learning Model
+### 🌦️ Live Weather Data
 
-Random Forest Classifier trained on the Adult Census Dataset with approximately 85% accuracy.
+Access real-time:
 
-### 📈 Performance Evaluation
+* Temperature
+* Wind Speed
+* Precipitation
+* Weather Conditions
 
-Comprehensive evaluation metrics including:
+### 🤖 AI-Powered Risk Prediction
 
-* Accuracy
-* Precision
-* Recall
-* F1 Score
-* Confusion Matrix
-* Classification Report
+Generate intelligent risk scores from 0–100 and classify weather conditions into:
 
-### 🔍 Feature Importance Analysis
+* 🟢 Low Risk
+* 🟡 Medium Risk
+* 🔴 High Risk
 
-Identify the most influential features affecting model predictions.
+### 🗺️ Interactive Mapping
 
-### ⚖️ Fairness Audit
+Visualize searched locations using Leaflet and OpenStreetMap with dynamic map centering.
 
-Analyze model behavior across race and gender groups using disparity metrics.
+### 📊 Smart Analytics Dashboard
 
-### 🔄 Counterfactual Explanations
+Monitor predictions, alerts, and recent weather-related events through an intuitive interface.
 
-Generate actionable "what-if" scenarios showing how predictions can change.
+### ⚡ Real-Time Updates
 
-### 💻 Streamlit Dashboard
+Dashboard data automatically refreshes every 30 seconds to ensure accuracy.
 
-Interactive and user-friendly interface for model exploration and fairness analysis.
+### 🆓 100% Free
+
+No subscriptions.
+
+No API keys.
+
+No hidden costs.
 
 ---
 
-## 🏗️ Architecture
+## 🏗️ System Architecture
 
 ```text
-User Input
+User Search
      │
      ▼
-Data Processing
+City Geolocation
      │
      ▼
-Feature Engineering
+Open-Meteo API
      │
      ▼
-Random Forest Model
+Weather Data Processing
      │
-     ├── Prediction Engine
-     ├── Fairness Analysis
-     └── Explainability Module
+     ├── Risk Prediction Engine
+     ├── Event Monitoring
+     └── Database Storage
      │
      ▼
 Interactive Dashboard
@@ -94,124 +99,162 @@ Interactive Dashboard
 
 ## 🛠️ Technology Stack
 
-| Category         | Technologies        |
-| ---------------- | ------------------- |
-| Language         | Python              |
-| Data Processing  | Pandas, NumPy       |
-| Machine Learning | Scikit-Learn        |
-| Visualization    | Matplotlib, Seaborn |
-| Web Application  | Streamlit           |
-| Version Control  | Git, GitHub         |
+| Category         | Technologies              |
+| ---------------- | ------------------------- |
+| Backend          | FastAPI, Python           |
+| Database         | SQLite                    |
+| Machine Learning | Scikit-Learn              |
+| Weather Data     | Open-Meteo API            |
+| Frontend         | Next.js 14, React         |
+| Mapping          | Leaflet.js, OpenStreetMap |
+| Networking       | Axios                     |
+| Styling          | Responsive CSS            |
 
 ---
 
 ## 📂 Project Structure
 
 ```text
-fairness-forecaster/
+prediction-app/
+
+├── backend/
+│   ├── main.py
+│   ├── scraper.py
+│   ├── predictor.py
+│   ├── database.py
+│   └── requirements.txt
 │
-├── app.py
-├── requirements.txt
-├── README.md
+├── frontend/
+│   ├── app/
+│   │   ├── page.js
+│   │   ├── layout.js
+│   │   ├── components.js
+│   │   └── Map.jsx
+│   │
+│   ├── package.json
+│   └── next.config.js
+│
 ├── .gitignore
-│
-├── adult.data.txt
-├── adult.test.txt
-└── adult.names.txt
+└── README.md
 ```
 
 ---
 
 ## 🚀 Installation
 
-Clone the repository:
+### Prerequisites
+
+* Python 3.8+
+* Node.js 16+
+
+### Clone Repository
 
 ```bash
-git clone https://github.com/krishnapopat130324-art/fairness-forecaster.git
+git clone https://github.com/krishnapopat130324-art/prediction-app.git
 
-cd fairness-forecaster
+cd prediction-app
 ```
 
-Create a virtual environment:
+### Backend Setup
 
 ```bash
+cd backend
+
 python -m venv venv
-```
 
-Activate environment:
-
-Windows:
-
-```bash
 venv\Scripts\activate
-```
 
-Linux/macOS:
-
-```bash
-source venv/bin/activate
-```
-
-Install dependencies:
-
-```bash
 pip install -r requirements.txt
+
+python main.py
 ```
 
----
-
-## ▶️ Run the Application
-
-```bash
-streamlit run app.py
-```
-
-Open:
+Backend Server:
 
 ```text
-http://localhost:8501
+http://localhost:8000
+```
+
+### Frontend Setup
+
+```bash
+cd frontend
+
+npm install
+
+npm run dev
+```
+
+Frontend Application:
+
+```text
+http://localhost:3000
 ```
 
 ---
 
-## 📊 Results
+## 📡 API Endpoints
 
-| Metric    | Performance |
-| --------- | ----------- |
-| Accuracy  | ~85%        |
-| Precision | High        |
-| Recall    | High        |
-| F1 Score  | High        |
+| Endpoint                           | Description                                    |
+| ---------------------------------- | ---------------------------------------------- |
+| `/predict`                         | Generate weather predictions and risk analysis |
+| `/events`                          | Retrieve recent weather events                 |
+| `/debug`                           | Debug API responses                            |
+| `/predict?lat=51.5074&lon=-0.1278` | Example prediction request                     |
 
-### Key Insights
+---
 
-* Strong predictive performance
-* Detects demographic disparities
-* Provides fairness measurements
-* Improves model transparency
-* Supports responsible AI development
+## ⚙️ Configuration
+
+### Change Default City
+
+The application currently uses Rajkot, Gujarat as the default location.
+
+Update the coordinates inside:
+
+* `backend/scraper.py`
+* `frontend/app/Map.jsx`
+
+Restart both services after making changes.
+
+---
+
+## 📈 Project Highlights
+
+✅ Global Weather Search
+
+✅ AI-Based Risk Prediction
+
+✅ Interactive Maps
+
+✅ Real-Time Data Updates
+
+✅ Event Monitoring
+
+✅ Responsive Design
+
+✅ Open-Source Architecture
 
 ---
 
 ## 🎯 Skills Demonstrated
 
-* Machine Learning
-* Data Science
-* Data Cleaning
-* Feature Engineering
-* Model Evaluation
-* Explainable AI
-* Fairness Analysis
+* Full-Stack Development
+* API Development
+* Machine Learning Integration
+* Data Processing
+* Geospatial Applications
+* Frontend Engineering
+* Backend Architecture
+* Database Management
 * Software Engineering
-* Interactive Dashboard Development
-* Data Visualization
 
 ---
 
-##  Author
+## 👨‍💻 Author
 
-* Krishna Popat
-* 
+**Krishna Popat**
+
 ---
 
-### Built with a commitment to Fair, Explainable, and Responsible AI.
+### Built to make weather intelligence accessible, understandable, and actionable for everyone.
